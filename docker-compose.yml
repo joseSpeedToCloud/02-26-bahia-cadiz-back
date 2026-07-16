@@ -1,3 +1,8 @@
+# Nombre de proyecto fijado a proposito: el repo se renombro a 02-26-bahia-cadiz-back,
+# pero los volumenes existentes (con los datos) se crearon bajo el nombre "drupal-bahia-cadiz".
+# NO cambiar este valor o Docker Compose dejara de encontrar los volumenes/datos existentes.
+name: drupal-bahia-cadiz
+
 services:
   drupal:
     build:

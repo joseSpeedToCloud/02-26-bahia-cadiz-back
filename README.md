@@ -1,6 +1,6 @@
 # Backend Drupal — Plataforma Digital Bahía de Cádiz (Expediente 312/2026)
 
-CMS headless (Drupal 11) que expone JSON:API para el Portal (`../bahia-cadiz-portal-pwa`). Ver `especificaciones/SPEC-001-plataforma-bahia-cadiz.md` y `panel/README.md` para el detalle de tasks.
+CMS headless (Drupal 11) que expone JSON:API para el Portal (`../02-26-bahia-cadiz-front`). Ver `especificaciones/SPEC-001-plataforma-bahia-cadiz.md` y `panel/README.md` para el detalle de tasks.
 
 ## Arrancar en local
 
