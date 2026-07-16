@@ -1,0 +1,23 @@
+uuid: 4e2bdcd3-0c41-42bb-9d0e-0a48e83f5139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_lng_inicio
+    - node.type.ruta
+id: node.ruta.field_ruta_lng_inicio
+field_name: field_ruta_lng_inicio
+entity_type: node
+bundle: ruta
+label: 'Longitud punto de inicio'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

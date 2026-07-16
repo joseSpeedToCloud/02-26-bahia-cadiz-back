@@ -1,0 +1,163 @@
+uuid: d290f1c4-1bc0-41e1-b8bb-2de163fc80c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta.field_ruta_descripcion
+    - field.field.node.ruta.field_ruta_dificultad
+    - field.field.node.ruta.field_ruta_distancia_km
+    - field.field.node.ruta.field_ruta_duracion_min
+    - field.field.node.ruta.field_ruta_etiquetas
+    - field.field.node.ruta.field_ruta_imagen
+    - field.field.node.ruta.field_ruta_lat_fin
+    - field.field.node.ruta.field_ruta_lat_inicio
+    - field.field.node.ruta.field_ruta_lng_fin
+    - field.field.node.ruta.field_ruta_lng_inicio
+    - field.field.node.ruta.field_ruta_municipios
+    - field.field.node.ruta.field_ruta_tipo
+    - field.field.node.ruta.field_ruta_track
+    - image.style.thumbnail
+    - node.type.ruta
+  module:
+    - file
+    - image
+    - path
+    - text
+id: node.ruta.default
+targetEntityType: node
+bundle: ruta
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ruta_descripcion:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_dificultad:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ruta_distancia_km:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_duracion_min:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_etiquetas:
+    type: entity_reference_autocomplete_tags
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_imagen:
+    type: image_image
+    weight: 12
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_ruta_lat_fin:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_lat_inicio:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_lng_fin:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_lng_inicio:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_municipios:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ruta_tipo:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ruta_track:
+    type: file_generic
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

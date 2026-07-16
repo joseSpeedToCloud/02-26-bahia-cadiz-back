@@ -1,0 +1,19 @@
+uuid: f3cd92bb-3db2-4e82-b7fb-f7d28e6ef110
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evento_direccion
+    - node.type.evento
+id: node.evento.field_evento_direccion
+field_name: field_evento_direccion
+entity_type: node
+bundle: evento
+label: 'Direccion / lugar de celebracion'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

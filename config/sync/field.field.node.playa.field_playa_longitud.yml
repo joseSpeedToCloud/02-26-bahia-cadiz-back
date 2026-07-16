@@ -1,0 +1,23 @@
+uuid: 8cef57e3-a7d7-4a32-9315-666a56821564
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_longitud
+    - node.type.playa
+id: node.playa.field_playa_longitud
+field_name: field_playa_longitud
+entity_type: node
+bundle: playa
+label: Longitud
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,168 @@
+uuid: ef83b245-2b22-4798-b341-29087a28ef45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.evento.field_evento_accesible
+    - field.field.node.evento.field_evento_categoria
+    - field.field.node.evento.field_evento_descripcion
+    - field.field.node.evento.field_evento_direccion
+    - field.field.node.evento.field_evento_enlace
+    - field.field.node.evento.field_evento_etiquetas
+    - field.field.node.evento.field_evento_fecha_fin
+    - field.field.node.evento.field_evento_fecha_inicio
+    - field.field.node.evento.field_evento_imagen
+    - field.field.node.evento.field_evento_latitud
+    - field.field.node.evento.field_evento_longitud
+    - field.field.node.evento.field_evento_municipio
+    - field.field.node.evento.field_evento_organizador
+    - field.field.node.evento.field_evento_precio
+    - node.type.evento
+  module:
+    - datetime
+    - image
+    - link
+    - text
+    - user
+id: node.evento.default
+targetEntityType: node
+bundle: evento
+mode: default
+content:
+  field_evento_accesible:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_evento_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_evento_descripcion:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_evento_direccion:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_evento_enlace:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_evento_etiquetas:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_evento_fecha_fin:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_evento_fecha_inicio:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_evento_imagen:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_evento_latitud:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_evento_longitud:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_evento_municipio:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_evento_organizador:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_evento_precio:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

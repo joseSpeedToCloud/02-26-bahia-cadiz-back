@@ -1,0 +1,21 @@
+uuid: 6a847c7d-cf65-4162-8e42-a16977d93e4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evento_etiquetas
+    - node.type.evento
+id: node.evento.field_evento_etiquetas
+field_name: field_evento_etiquetas
+entity_type: node
+bundle: evento
+label: 'Etiquetas semanticas (UNE 178503)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

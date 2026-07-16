@@ -1,0 +1,21 @@
+uuid: 5f607bf5-9df8-4a8d-ab7d-62dc07ea4746
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evento_categoria
+    - node.type.evento
+id: node.evento.field_evento_categoria
+field_name: field_evento_categoria
+entity_type: node
+bundle: evento
+label: Categoria
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 96e42e73-aea5-4d4a-9a0d-193fd5a7c687
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_ruta_descripcion
+field_name: field_ruta_descripcion
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

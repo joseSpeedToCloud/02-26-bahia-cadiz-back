@@ -1,0 +1,21 @@
+uuid: 00d351e1-a806-4976-89d9-c1baad285033
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_etiquetas
+    - node.type.playa
+id: node.playa.field_playa_etiquetas
+field_name: field_playa_etiquetas
+entity_type: node
+bundle: playa
+label: 'Etiquetas semanticas (UNE 178503)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

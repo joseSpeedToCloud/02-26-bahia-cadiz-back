@@ -1,0 +1,23 @@
+uuid: bfdbab2e-52e9-4e0f-95fd-6ef751fe7c0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_lat_fin
+    - node.type.ruta
+id: node.ruta.field_ruta_lat_fin
+field_name: field_ruta_lat_fin
+entity_type: node
+bundle: ruta
+label: 'Latitud punto de fin'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

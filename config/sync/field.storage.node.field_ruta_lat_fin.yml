@@ -1,0 +1,20 @@
+uuid: bafae6c7-3ac5-4633-8292-18a10fcf28bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ruta_lat_fin
+field_name: field_ruta_lat_fin
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 6
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,33 @@
+uuid: c1985795-f39a-43b6-b25f-02b707361efd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_ruta_tipo
+field_name: field_ruta_tipo
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ciclista
+      label: Ciclista
+    -
+      value: senderismo
+      label: Senderismo
+    -
+      value: accesible
+      label: Accesible
+    -
+      value: urbana
+      label: Urbana
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

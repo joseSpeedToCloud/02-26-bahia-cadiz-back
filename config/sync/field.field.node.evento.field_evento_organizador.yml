@@ -1,0 +1,19 @@
+uuid: 7586fc81-25ae-48b4-8ae5-e3249acfaf01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evento_organizador
+    - node.type.evento
+id: node.evento.field_evento_organizador
+field_name: field_evento_organizador
+entity_type: node
+bundle: evento
+label: Organizador
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

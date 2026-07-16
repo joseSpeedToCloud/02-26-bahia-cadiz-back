@@ -1,0 +1,9 @@
+uuid: 327850b1-17fd-4e4a-a33f-d42a3aecbcd8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Servicios de playa'
+vid: servicios_playa
+description: 'Servicios y equipamientos disponibles en cada playa.'
+weight: 0
+new_revision: false

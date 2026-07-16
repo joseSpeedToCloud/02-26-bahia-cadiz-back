@@ -1,0 +1,23 @@
+uuid: bc9f3cf4-0b42-4dc5-9324-bbe985ad6211
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evento_latitud
+    - node.type.evento
+id: node.evento.field_evento_latitud
+field_name: field_evento_latitud
+entity_type: node
+bundle: evento
+label: Latitud
+description: 'Coordenada GPS (WGS84) para integracion GIS (WMS/WFS/GeoJSON).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

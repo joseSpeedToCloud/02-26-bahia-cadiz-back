@@ -1,0 +1,24 @@
+# Dependencias gestionadas por Composer (reproducibles desde composer.json/lock)
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/profiles/contrib/
+/web/themes/contrib/
+/web/libraries/
+/drush/Commands/contrib/
+
+# Scaffold generado por Drupal (index.php, .htaccess, robots.txt, etc.)
+/web/autoload.php
+/web/index.php
+/web/robots.txt
+/web/update.php
+/web/.htaccess
+/web/sites/default/files/
+
+# Configuracion local con secretos, nunca en Git
+/web/sites/default/settings.local.php
+.env
+
+# Sistema
+.DS_Store
+Thumbs.db

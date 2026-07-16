@@ -1,0 +1,175 @@
+uuid: a614d820-39d2-4353-a754-22cb603267ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.evento.field_evento_accesible
+    - field.field.node.evento.field_evento_categoria
+    - field.field.node.evento.field_evento_descripcion
+    - field.field.node.evento.field_evento_direccion
+    - field.field.node.evento.field_evento_enlace
+    - field.field.node.evento.field_evento_etiquetas
+    - field.field.node.evento.field_evento_fecha_fin
+    - field.field.node.evento.field_evento_fecha_inicio
+    - field.field.node.evento.field_evento_imagen
+    - field.field.node.evento.field_evento_latitud
+    - field.field.node.evento.field_evento_longitud
+    - field.field.node.evento.field_evento_municipio
+    - field.field.node.evento.field_evento_organizador
+    - field.field.node.evento.field_evento_precio
+    - image.style.thumbnail
+    - node.type.evento
+  module:
+    - datetime
+    - image
+    - link
+    - path
+    - text
+id: node.evento.default
+targetEntityType: node
+bundle: evento
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_evento_accesible:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_evento_categoria:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_evento_descripcion:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_evento_direccion:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_evento_enlace:
+    type: link_default
+    weight: 11
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_evento_etiquetas:
+    type: entity_reference_autocomplete_tags
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_evento_fecha_fin:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_evento_fecha_inicio:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_evento_imagen:
+    type: image_image
+    weight: 9
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_evento_latitud:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_evento_longitud:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_evento_municipio:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_evento_organizador:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_evento_precio:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

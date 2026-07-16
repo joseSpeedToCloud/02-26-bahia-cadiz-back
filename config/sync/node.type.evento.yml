@@ -1,0 +1,11 @@
+uuid: a8450db0-67bf-4a0b-b1ea-44ec7333d427
+langcode: en
+status: true
+dependencies: {  }
+name: Evento
+type: evento
+description: 'Elemento de la Agenda de Eventos: cultura, ocio y actividades de los municipios.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

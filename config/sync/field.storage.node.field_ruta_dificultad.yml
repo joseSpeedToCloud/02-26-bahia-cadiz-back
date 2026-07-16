@@ -1,0 +1,30 @@
+uuid: 6be17878-8897-4e64-856f-02de1927e9db
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_ruta_dificultad
+field_name: field_ruta_dificultad
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: baja
+      label: Baja
+    -
+      value: media
+      label: Media
+    -
+      value: alta
+      label: Alta
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

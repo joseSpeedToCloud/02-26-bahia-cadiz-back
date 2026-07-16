@@ -1,0 +1,20 @@
+uuid: 208f38cb-c589-4b2d-a967-9984e35efca1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ruta_municipios
+field_name: field_ruta_municipios
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

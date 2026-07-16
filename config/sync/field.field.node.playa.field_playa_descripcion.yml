@@ -1,0 +1,22 @@
+uuid: 41584e75-562e-41a4-a0ba-447d73c1c842
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_descripcion
+    - node.type.playa
+  module:
+    - text
+id: node.playa.field_playa_descripcion
+field_name: field_playa_descripcion
+entity_type: node
+bundle: playa
+label: Descripcion
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,30 @@
+uuid: b5520a22-d6bd-4b30-89da-2ff654707b34
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_playa_estado_mar
+field_name: field_playa_estado_mar
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: tranquilo
+      label: Tranquilo
+    -
+      value: moderado
+      label: Moderado
+    -
+      value: agitado
+      label: Agitado
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

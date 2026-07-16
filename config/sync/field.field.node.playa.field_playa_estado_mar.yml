@@ -1,0 +1,21 @@
+uuid: b529a161-8a4b-4163-97bb-52c29bd76e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_estado_mar
+    - node.type.playa
+  module:
+    - options
+id: node.playa.field_playa_estado_mar
+field_name: field_playa_estado_mar
+entity_type: node
+bundle: playa
+label: 'Estado del mar'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,9 @@
+uuid: d30a453d-c0d5-4ae9-b207-ce2ea73eb4c0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Categoria de evento'
+vid: categoria_evento
+description: 'Clasificacion de la Agenda de Eventos.'
+weight: 0
+new_revision: false

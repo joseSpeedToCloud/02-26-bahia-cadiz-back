@@ -1,0 +1,22 @@
+uuid: 04409964-b6ff-4a8d-9eb0-9d283ef3cfd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_descripcion
+    - node.type.ruta
+  module:
+    - text
+id: node.ruta.field_ruta_descripcion
+field_name: field_ruta_descripcion
+entity_type: node
+bundle: ruta
+label: Descripcion
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

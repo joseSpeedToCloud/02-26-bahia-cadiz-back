@@ -1,0 +1,9 @@
+uuid: 2cf0e74d-6884-4bcc-aeac-2fcd4c2c8bf7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Etiquetas semanticas (UNE 178503)'
+vid: etiquetas_semanticas
+description: 'Etiquetado libre alineado con la ontologia de destinos turisticos inteligentes UNE 178503. Los editores anaden terminos segun lo necesiten.'
+weight: 0
+new_revision: false

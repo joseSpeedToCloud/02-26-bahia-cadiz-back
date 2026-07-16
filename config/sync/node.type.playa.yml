@@ -1,0 +1,11 @@
+uuid: 814c2dfb-e674-41f5-83df-f5364a2b6d3c
+langcode: en
+status: true
+dependencies: {  }
+name: Playa
+type: playa
+description: 'Informacion en tiempo real de una playa: estado del mar, ocupacion, banderas y accesibilidad.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

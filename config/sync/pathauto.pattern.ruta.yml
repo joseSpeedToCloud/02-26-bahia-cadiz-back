@@ -1,0 +1,23 @@
+uuid: 6d7a48bb-cb2e-41f2-9cfc-ba2761ce499b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ruta
+  module:
+    - node
+id: ruta
+label: Ruta
+type: 'canonical_entities:node'
+pattern: '/rutas/[node:title]'
+selection_criteria:
+  bundle_condition:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      ruta: ruta
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,21 @@
+uuid: d51eb712-b0a6-4d92-a469-96d869c65e58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_municipios
+    - node.type.ruta
+id: node.ruta.field_ruta_municipios
+field_name: field_ruta_municipios
+entity_type: node
+bundle: ruta
+label: 'Municipios que recorre'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

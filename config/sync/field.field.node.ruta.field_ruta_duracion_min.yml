@@ -1,0 +1,23 @@
+uuid: 12a3a0d5-6bcf-4c6b-91df-b073c4c31f27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_duracion_min
+    - node.type.ruta
+id: node.ruta.field_ruta_duracion_min
+field_name: field_ruta_duracion_min
+entity_type: node
+bundle: ruta
+label: 'Duracion estimada (min)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: 5d618a68-696a-42f2-b6a7-5cc12eefa460
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_distancia_km
+    - node.type.ruta
+id: node.ruta.field_ruta_distancia_km
+field_name: field_ruta_distancia_km
+entity_type: node
+bundle: ruta
+label: 'Distancia (km)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

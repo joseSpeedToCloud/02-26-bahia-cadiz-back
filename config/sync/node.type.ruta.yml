@@ -1,0 +1,11 @@
+uuid: 6ffc6b2d-35a1-43dd-88c9-65238911cd7c
+langcode: en
+status: true
+dependencies: {  }
+name: Ruta
+type: ruta
+description: 'Ruta de movilidad sostenible (ciclista, senderista o accesible) de la Bahia de Cadiz.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

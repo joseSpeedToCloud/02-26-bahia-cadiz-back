@@ -1,0 +1,19 @@
+uuid: 699a2192-e7a4-4cd4-8f7b-c6f93a0753d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evento_precio
+    - node.type.evento
+id: node.evento.field_evento_precio
+field_name: field_evento_precio
+entity_type: node
+bundle: evento
+label: Precio
+description: "Ej: 'Gratuito', '10 EUR', 'Desde 5 EUR'."
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

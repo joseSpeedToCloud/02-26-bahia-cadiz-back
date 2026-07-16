@@ -1,0 +1,23 @@
+uuid: 54ee6443-ecab-4b19-b7b9-245bc7fa0456
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_latitud
+    - node.type.playa
+id: node.playa.field_playa_latitud
+field_name: field_playa_latitud
+entity_type: node
+bundle: playa
+label: Latitud
+description: 'Coordenada GPS (WGS84) para integracion GIS (WMS/WFS/GeoJSON) y exposicion JSON-LD/schema.org (TASK-019).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

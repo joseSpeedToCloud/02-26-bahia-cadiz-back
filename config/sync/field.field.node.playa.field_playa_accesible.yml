@@ -1,0 +1,21 @@
+uuid: 42b23a12-2519-42a7-bbae-1b5da70df897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_accesible
+    - node.type.playa
+id: node.playa.field_playa_accesible
+field_name: field_playa_accesible
+entity_type: node
+bundle: playa
+label: 'Accesible para movilidad reducida'
+description: 'Cumple criterios de accesibilidad (WCAG 2.1 AA, ap. 4.4 del PPT).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

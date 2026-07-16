@@ -1,0 +1,35 @@
+services:
+  drupal:
+    build:
+      context: .
+      dockerfile: docker/drupal/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      DRUPAL_DB_NAME: ${DRUPAL_DB_NAME:-drupal}
+      DRUPAL_DB_USER: ${DRUPAL_DB_USER:-drupal}
+      DRUPAL_DB_PASSWORD: ${DRUPAL_DB_PASSWORD:-drupal}
+      DRUPAL_DB_HOST: db
+      DRUPAL_DB_PORT: 3306
+      DRUPAL_HASH_SALT: ${DRUPAL_HASH_SALT}
+    volumes:
+      # Persistencia de ficheros publicos subidos por usuarios (imagenes, PDFs, etc.).
+      # El codigo (core, contrib, custom, config) vive en la imagen, versionado en Git;
+      # solo los datos generados en tiempo de ejecucion se persisten en volumenes.
+      - drupal-files:/opt/drupal/web/sites/default/files
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: ${DRUPAL_DB_NAME:-drupal}
+      MARIADB_USER: ${DRUPAL_DB_USER:-drupal}
+      MARIADB_PASSWORD: ${DRUPAL_DB_PASSWORD:-drupal}
+      MARIADB_ROOT_PASSWORD: ${DRUPAL_DB_ROOT_PASSWORD:-root}
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  drupal-files:
+  db-data:

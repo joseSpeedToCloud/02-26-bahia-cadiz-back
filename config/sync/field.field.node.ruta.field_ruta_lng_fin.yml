@@ -1,0 +1,23 @@
+uuid: 74ffdc9c-d43c-4ec5-86d5-c7c5f00dc9f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_lng_fin
+    - node.type.ruta
+id: node.ruta.field_ruta_lng_fin
+field_name: field_ruta_lng_fin
+entity_type: node
+bundle: ruta
+label: 'Longitud punto de fin'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

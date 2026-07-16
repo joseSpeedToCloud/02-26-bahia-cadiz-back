@@ -1,0 +1,38 @@
+uuid: 9925f2a9-506d-4f4e-b2ef-713a58f099fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evento_imagen
+    - node.type.evento
+  module:
+    - image
+id: node.evento.field_evento_imagen
+field_name: field_evento_imagen
+entity_type: node
+bundle: evento
+label: 'Imagen destacada'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

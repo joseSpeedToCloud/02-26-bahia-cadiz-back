@@ -1,0 +1,20 @@
+uuid: e6741e99-54d2-4576-ab88-24d3a07690ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_playa_longitud
+field_name: field_playa_longitud
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 6
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

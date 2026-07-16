@@ -1,0 +1,21 @@
+uuid: df2bb082-0351-4a8f-9040-5e50360e65c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_bandera
+    - node.type.playa
+  module:
+    - options
+id: node.playa.field_playa_bandera
+field_name: field_playa_bandera
+entity_type: node
+bundle: playa
+label: Bandera
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 886687bf-2467-4d85-91e7-3bc2eaa949ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_longitud_m
+    - node.type.playa
+id: node.playa.field_playa_longitud_m
+field_name: field_playa_longitud_m
+entity_type: node
+bundle: playa
+label: 'Longitud de la playa (metros)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

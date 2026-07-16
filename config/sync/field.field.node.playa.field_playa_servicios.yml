@@ -1,0 +1,21 @@
+uuid: 84fa9e1d-7951-44c5-9ff0-001d74d7a54a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playa_servicios
+    - node.type.playa
+id: node.playa.field_playa_servicios
+field_name: field_playa_servicios
+entity_type: node
+bundle: playa
+label: 'Servicios disponibles'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

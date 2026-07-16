@@ -1,0 +1,138 @@
+uuid: 22df0858-b94f-4625-9ada-c87e2eaede3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.playa.field_playa_accesible
+    - field.field.node.playa.field_playa_bandera
+    - field.field.node.playa.field_playa_descripcion
+    - field.field.node.playa.field_playa_estado_mar
+    - field.field.node.playa.field_playa_etiquetas
+    - field.field.node.playa.field_playa_imagen
+    - field.field.node.playa.field_playa_latitud
+    - field.field.node.playa.field_playa_longitud
+    - field.field.node.playa.field_playa_longitud_m
+    - field.field.node.playa.field_playa_municipio
+    - field.field.node.playa.field_playa_ocupacion
+    - field.field.node.playa.field_playa_servicios
+    - node.type.playa
+  module:
+    - image
+    - options
+    - text
+    - user
+id: node.playa.default
+targetEntityType: node
+bundle: playa
+mode: default
+content:
+  field_playa_accesible:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_playa_bandera:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_playa_descripcion:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_playa_estado_mar:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_playa_etiquetas:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_playa_imagen:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_playa_latitud:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_playa_longitud:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_playa_longitud_m:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_playa_municipio:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_playa_ocupacion:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_playa_servicios:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

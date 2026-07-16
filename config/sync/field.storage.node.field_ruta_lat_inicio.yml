@@ -1,0 +1,20 @@
+uuid: 5d9ef520-a06d-4bd6-8c29-de99b6e726a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ruta_lat_inicio
+field_name: field_ruta_lat_inicio
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 6
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

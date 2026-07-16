@@ -1,0 +1,23 @@
+uuid: 8472fea1-bd6b-426c-ba43-c71566646f20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_lat_inicio
+    - node.type.ruta
+id: node.ruta.field_ruta_lat_inicio
+field_name: field_ruta_lat_inicio
+entity_type: node
+bundle: ruta
+label: 'Latitud punto de inicio'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

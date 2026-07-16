@@ -1,0 +1,21 @@
+uuid: 0b9db3b7-9c46-426d-b0d2-f946fd01dec3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evento_accesible
+    - node.type.evento
+id: node.evento.field_evento_accesible
+field_name: field_evento_accesible
+entity_type: node
+bundle: evento
+label: 'Evento accesible'
+description: 'Cumple criterios de accesibilidad (WCAG 2.1 AA / RD 1112/2018).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

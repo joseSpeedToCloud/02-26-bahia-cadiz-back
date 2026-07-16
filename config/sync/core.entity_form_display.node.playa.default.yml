@@ -1,0 +1,152 @@
+uuid: 54008864-bb61-4dad-86ed-25a5243956ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.playa.field_playa_accesible
+    - field.field.node.playa.field_playa_bandera
+    - field.field.node.playa.field_playa_descripcion
+    - field.field.node.playa.field_playa_estado_mar
+    - field.field.node.playa.field_playa_etiquetas
+    - field.field.node.playa.field_playa_imagen
+    - field.field.node.playa.field_playa_latitud
+    - field.field.node.playa.field_playa_longitud
+    - field.field.node.playa.field_playa_longitud_m
+    - field.field.node.playa.field_playa_municipio
+    - field.field.node.playa.field_playa_ocupacion
+    - field.field.node.playa.field_playa_servicios
+    - image.style.thumbnail
+    - node.type.playa
+  module:
+    - image
+    - path
+    - text
+id: node.playa.default
+targetEntityType: node
+bundle: playa
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_playa_accesible:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_playa_bandera:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_playa_descripcion:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_playa_estado_mar:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_playa_etiquetas:
+    type: entity_reference_autocomplete_tags
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_playa_imagen:
+    type: image_image
+    weight: 11
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_playa_latitud:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_playa_longitud:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_playa_longitud_m:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_playa_municipio:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_playa_ocupacion:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_playa_servicios:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

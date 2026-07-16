@@ -1,0 +1,23 @@
+uuid: 726eaa9d-2d13-44b6-90c7-aa2e256d3446
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.playa
+  module:
+    - node
+id: playa
+label: Playa
+type: 'canonical_entities:node'
+pattern: '/playas/[node:title]'
+selection_criteria:
+  bundle_condition:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      playa: playa
+selection_logic: and
+weight: 0
+relationships: {  }
