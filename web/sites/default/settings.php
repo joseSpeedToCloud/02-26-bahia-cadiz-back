@@ -33,6 +33,10 @@ $settings['trusted_host_patterns'] = [
 
 $settings['file_public_path'] = 'sites/default/files';
 
+// Sin esto, Drupal ignora sites/default/services.yml por completo (no se
+// carga automaticamente por su sola presencia: hay que declararlo aqui).
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+
 // Requisito ENS/RGPD (ver TASK-008): evitar exposicion de datos en despliegues no productivos.
 $config['system.logging']['error_level'] = 'verbose';
 

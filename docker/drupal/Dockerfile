@@ -7,8 +7,9 @@ WORKDIR /opt/drupal
 COPY composer.json composer.lock ./
 RUN composer install --no-interaction --no-progress --optimize-autoloader
 
-# Codigo propio versionado: settings.php, modulos/temas custom y configuracion exportada.
+# Codigo propio versionado: settings.php, services.yml (CORS), modulos/temas custom y configuracion exportada.
 COPY web/sites/default/settings.php web/sites/default/settings.php
+COPY web/sites/default/services.yml web/sites/default/services.yml
 COPY web/modules/custom/ web/modules/custom/
 COPY web/themes/custom/ web/themes/custom/
 COPY config/sync/ /opt/drupal/config/sync/
