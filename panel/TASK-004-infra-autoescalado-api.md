@@ -5,7 +5,7 @@
 **Prioridad:** High
 **Story Points:** 5
 **Labels:** infra, terraform, gcp, api
-**Estado:** Pendiente
+**Estado:** Hecho
 
 ## Descripción técnica
 
@@ -13,4 +13,8 @@ Configurar autoescalado horizontal (min/max instancias) del backend/API del CMS 
 
 ## Entregable / Evidencia
 
-Política de autoescalado documentada + prueba de carga básica.
+**Implementado en `02-26-infra-terraform`**:
+- `Fase2/1.Cloud-Run-Front/main.tf` y `Fase2/2.Cloud-Run-Back/main.tf`: `min_instances = 0`, `max_instances = 10` (configurable por variable), aplicado como `scaling { min_instance_count / max_instance_count }`.
+- Arquitectura API-first ya confirmada en la práctica: el CMS (Drupal) expone JSON:API y el portal (Angular/Ionic) consume esa API — sin acoplamiento de renderizado servidor a servidor.
+
+Pendiente: la "prueba de carga básica" explícita del entregable original — no se ha ejecutado ningún test de carga real todavía (relacionado con el INT-005 del proyecto de Poniente Granada, mismo tipo de hueco).

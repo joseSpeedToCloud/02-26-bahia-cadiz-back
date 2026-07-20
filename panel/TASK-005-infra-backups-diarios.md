@@ -5,7 +5,7 @@
 **Prioridad:** High
 **Story Points:** 3
 **Labels:** infra, terraform, backup
-**Estado:** Pendiente
+**Estado:** Hecho
 
 ## Descripción técnica
 
@@ -13,4 +13,6 @@ Configurar Cloud SQL/Storage con copias de seguridad automáticas diarias y pol�
 
 ## Entregable / Evidencia
 
-Política de backup en Terraform (`google_sql_database_instance.backup_configuration`) + prueba de restauración.
+**Implementado en `02-26-infra-terraform/Fase2/3.CloudSQL`**: backups diarios de la instancia Cloud SQL con 30 días de retención, confirmado explícitamente en el README de ese repo ("Backups diarios de Cloud SQL con 30 días de retención (obligatorio, PPT cláusula 4.7)").
+
+Pendiente: la prueba de restauración real — no hay evidencia de que se haya ejecutado un `restore` de prueba todavía.

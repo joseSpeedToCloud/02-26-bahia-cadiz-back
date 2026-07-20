@@ -7,14 +7,16 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 | ID | Título | Prioridad | SP | Estado |
 |----|--------|-----------|----|--------|
 | [TASK-001](TASK-001-infra-terraform-modulos.md) | Estructura de módulos Terraform | Highest | 8 | Pendiente |
-| [TASK-002](TASK-002-infra-terraform-backend-remoto.md) | Backend remoto de Terraform (GCS + locking) | Highest | 3 | Pendiente |
+| [TASK-002](TASK-002-infra-terraform-backend-remoto.md) | Backend remoto de Terraform (GCS + locking) | Highest | 3 | **Hecho** |
 | [TASK-003](TASK-003-infra-entornos-separados.md) | Entornos separados (dev/preprod/prod) | High | 5 | Pendiente |
-| [TASK-004](TASK-004-infra-autoescalado-api.md) | Autoescalado y arquitectura API-first | High | 5 | Pendiente |
-| [TASK-005](TASK-005-infra-backups-diarios.md) | Backups diarios, retención 30 días | High | 3 | Pendiente |
+| [TASK-004](TASK-004-infra-autoescalado-api.md) | Autoescalado y arquitectura API-first | High | 5 | **Hecho** |
+| [TASK-005](TASK-005-infra-backups-diarios.md) | Backups diarios, retención 30 días | High | 3 | **Hecho** |
 | [TASK-006](TASK-006-infra-monitorizacion-sla.md) | Monitorización y alertas SLA 99,5% | High | 5 | Pendiente |
 | [TASK-007](TASK-007-infra-certificacion-energetica.md) | Certificación energética del datacenter (condición especial B) | Highest | 2 | Pendiente |
-| [TASK-008](TASK-008-seguridad-iam-ens-rgpd.md) | Políticas IAM y cifrado (ENS básico + RGPD) | Highest | 8 | Pendiente |
-| [TASK-009](TASK-009-infra-cicd-github-actions.md) | Pipeline CI/CD (GitHub Actions) | High | 5 | Pendiente |
+| [TASK-008](TASK-008-seguridad-iam-ens-rgpd.md) | Políticas IAM y cifrado (ENS básico + RGPD) | Highest | 8 | **En progreso** |
+| [TASK-009](TASK-009-infra-cicd-github-actions.md) | Pipeline CI/CD (GitHub Actions) | High | 5 | **Hecho** (vía Cloud Build, ver nota en la task) |
+
+> Reconciliado el 2026-07-20 contra el Terraform real (`02-26-infra-terraform`), que no se conocía cuando se creó este panel — ver cada task para el detalle de la evidencia encontrada.
 
 ## CMS (Drupal headless) — 49 SP *(story points estimados; el checklist original no detallaba esta categoría en esta sesión)*
 
