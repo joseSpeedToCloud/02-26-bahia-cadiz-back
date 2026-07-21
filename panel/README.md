@@ -11,7 +11,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 | [TASK-003](TASK-003-infra-entornos-separados.md) | Entornos separados (dev/preprod/prod) | High | 5 | Pendiente |
 | [TASK-004](TASK-004-infra-autoescalado-api.md) | Autoescalado y arquitectura API-first | High | 5 | **Hecho** |
 | [TASK-005](TASK-005-infra-backups-diarios.md) | Backups diarios, retención 30 días | High | 3 | **Hecho** |
-| [TASK-006](TASK-006-infra-monitorizacion-sla.md) | Monitorización y alertas SLA 99,5% | High | 5 | En progreso (pendiente de aplicar) |
+| [TASK-006](TASK-006-infra-monitorizacion-sla.md) | Monitorización y alertas SLA 99,5% | High | 5 | **Hecho** |
 | [TASK-007](TASK-007-infra-certificacion-energetica.md) | Certificación energética del datacenter (condición especial B) | Highest | 2 | Pendiente |
 | [TASK-008](TASK-008-seguridad-iam-ens-rgpd.md) | Políticas IAM y cifrado (ENS básico + RGPD) | Highest | 8 | **En progreso** |
 | [TASK-009](TASK-009-infra-cicd-github-actions.md) | Pipeline CI/CD (GitHub Actions) | High | 5 | **Hecho** (vía Cloud Build, ver nota en la task) |
