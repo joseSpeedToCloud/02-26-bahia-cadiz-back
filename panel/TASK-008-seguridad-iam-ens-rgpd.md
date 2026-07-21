@@ -14,12 +14,15 @@ Definir roles IAM de mínimo privilegio, cifrado en reposo y en tránsito, y reg
 ## Entregable / Evidencia
 
 **Ya cumplido:**
+
 - IAM de mínimo privilegio por recurso concreto (no un módulo genérico, pero sí aplicado): `roles/cloudsql.client` solo al Cloud Run que lo necesita (`Fase2/3.CloudSQL`), `roles/secretmanager.secretAccessor` solo al service agent de Cloud Build que lo necesita (`Fase0/iam.tf`).
 - Secretos (contraseña BD, hash salt, admin password) nunca en texto plano ni en env vars visibles — todos en Secret Manager, inyectados por `secret_key_ref`.
 - Cifrado en reposo: por defecto de GCP (AES-256) en Cloud SQL/GCS/Secret Manager, sin configuración adicional necesaria.
+- Cifrado en tránsito de Cloud SQL: **confirmado en código**, no solo documentado — `ssl_mode = "ENCRYPTED_ONLY"` en `Fase2/3.CloudSQL/main.tf:63`.
+- **Cloud Audit Logs (Data Access)** aplicados en real sobre `cloudsql`/`storage`/`secretmanager` (`Fase0/iam.tf`, `terraform apply` confirmado).
+- **CORS restringido** al dominio real del front (`services.yml`, ya no `*`).
 
 **Sigue pendiente:**
-- Cifrado en tránsito explícito de Cloud SQL: verificar que `ssl_mode = ENCRYPTED_ONLY` (mencionado en el README de `02-26-infra-terraform`) esté realmente aplicado y no solo documentado.
-- Cloud Audit Logs: sin configuración explícita encontrada (ni habilitación ni exportación a un sink).
-- CORS del backend sigue abierto a `*` (`services.yml`) — pendiente restringir al dominio real, ver README de `02-26-web-back`.
+
+- **Organization Policies de GCP**: no hay ningún recurso `google_organization_policy`/`google_org_policy_policy` en ningún fichero del repo — no configuradas en absoluto (más allá del IAM de mínimo privilegio, que sí está aplicado). Este es un hueco propio, distinto del IAM. Propuestas pendientes de confirmar: `iam.disableServiceAccountKeyCreation`, `storage.uniformBucketLevelAccess`, `iam.allowedPolicyMemberDomains`.
 - Informe formal de cumplimiento ENS básico: no existe como documento todavía.
