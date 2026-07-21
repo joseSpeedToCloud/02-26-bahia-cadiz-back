@@ -5,7 +5,7 @@
 **Prioridad:** High
 **Story Points:** 5
 **Labels:** infra, monitoring, sla
-**Estado:** Pendiente
+**Estado:** En progreso (código escrito, pendiente de aplicar)
 
 ## Descripción técnica
 
@@ -13,4 +13,10 @@ Configurar Cloud Monitoring con uptime checks y alertas (email/Slack) para el cu
 
 ## Entregable / Evidencia
 
-Dashboards y políticas de alerta desplegados vía Terraform.
+**Implementado en `02-26-infra-terraform/Fase2/4.Monitoring`** (módulo nuevo, enganchado en `Fase2/main.tf`):
+
+- 2 uptime checks (portal front `/`, backend `/health.php`), cada 60s.
+- Canal de notificación por email.
+- 4 alertas: caída del front, caída del back (disponibilidad, SLA 99,5%), lentitud del front/back >3000ms (tiempo de respuesta comprometido).
+
+Pendiente: `terraform apply` real — bloqueado por falta de `terraform.tfvars` de `Fase2` (15 variables, incluida la contraseña de la BD), pedido a Ana junto con las credenciales de GitHub de OPS-001. Alertas Slack/Teams no incluidas todavía (depende de OPS-006, canal de comunicación, aún sin crear).
