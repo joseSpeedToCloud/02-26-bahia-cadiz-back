@@ -14,6 +14,7 @@ Configurar autoescalado horizontal (min/max instancias) del backend/API del CMS 
 ## Entregable / Evidencia
 
 **Implementado en `02-26-infra-terraform`**:
+
 - `Fase2/1.Cloud-Run-Front/main.tf` y `Fase2/2.Cloud-Run-Back/main.tf`: `min_instances = 0`, `max_instances = 10` (configurable por variable), aplicado como `scaling { min_instance_count / max_instance_count }`.
 - Arquitectura API-first ya confirmada en la práctica: el CMS (Drupal) expone JSON:API y el portal (Angular/Ionic) consume esa API — sin acoplamiento de renderizado servidor a servidor.
 
@@ -22,3 +23,8 @@ Configurar autoescalado horizontal (min/max instancias) del backend/API del CMS 
 - Front: 25.249 peticiones OK, 0 fallos.
 - Back (Drupal, bootstrap completo): 625 peticiones OK, 0 fallos.
 - Cloud Monitoring confirma escalado real de 0 → 1 instancia activa en ambos servicios durante la ventana de la prueba (partiendo de reposo, `min_instances=0`), sin caídas ni errores.
+
+**Prueba de carga repetida con artefacto reproducible** (antes solo quedaba como texto en este panel/el issue, sin script versionado): `02-26-infra-terraform/scripts/load-test.py` (stdlib de Python, sin dependencias) — mismos parámetros (30 workers, 60s por servicio). Resultado de la ejecución real, guardado en `02-26-infra-terraform/evidence/load-test-20260729-113011.json`:
+
+- Front: 6.776 peticiones OK, 0 fallos (latencia máx. 3.115 ms — pico de arranque en frío coherente con `min_instances=0`).
+- Back: 7.941 peticiones OK, 0 fallos (latencia máx. 842 ms).
