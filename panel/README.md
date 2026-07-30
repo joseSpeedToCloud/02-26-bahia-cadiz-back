@@ -24,7 +24,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 |----|--------|-----------|----|--------|
 | [TASK-010](TASK-010-backend-cms-headless-base.md) | Selección y puesta a punto base del CMS (Drupal) | Highest | 5 | Hecho |
 | [TASK-011](TASK-011-backend-arquitectura-headless-api.md) | Arquitectura headless / API estructurada y versionada | Highest | 8 | En progreso |
-| [TASK-012](TASK-012-backend-integracion-portal.md) | CMS como backend unificado / repositorio de contenidos | High | 5 | Pendiente |
+| [TASK-012](TASK-012-backend-integracion-portal.md) | CMS como backend unificado / repositorio de contenidos | High | 5 | **Hecho** |
 | [TASK-013](TASK-013-backend-puesta-produccion-carga-contenidos.md) | Puesta en producción + carga de contenidos existentes | High | 5 | Pendiente |
 | [TASK-014](TASK-014-backend-admin-usuarios-permisos.md) | Administración simplificada + permisos por rol | High | 5 | Pendiente |
 | [TASK-015](TASK-015-backend-tipos-contenido-workflows.md) | Tipos de contenido + flujos editoriales + versionado | Highest | 8 | En progreso |
