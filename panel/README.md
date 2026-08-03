@@ -27,7 +27,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 | [TASK-012](TASK-012-backend-integracion-portal.md) | CMS como backend unificado / repositorio de contenidos | High | 5 | **Hecho** |
 | [TASK-013](TASK-013-backend-puesta-produccion-carga-contenidos.md) | Puesta en producción + carga de contenidos existentes | High | 5 | **Hecho** |
 | [TASK-014](TASK-014-backend-admin-usuarios-permisos.md) | Administración simplificada + permisos por rol | High | 5 | Pendiente |
-| [TASK-015](TASK-015-backend-tipos-contenido-workflows.md) | Tipos de contenido + flujos editoriales + versionado | Highest | 8 | En progreso |
+| [TASK-015](TASK-015-backend-tipos-contenido-workflows.md) | Tipos de contenido + flujos editoriales + versionado | Highest | 8 | **Hecho** |
 | [TASK-016](TASK-016-backend-multiidioma.md) | Gestión multilingüe con traducción integrada | High | 5 | **Hecho** |
 | [TASK-017](TASK-017-backend-multisitio.md) | Soporte multisitio para los municipios | Medium | 5 | **Hecho** |
 | [TASK-018](TASK-018-backend-taxonomias-navegacion.md) | Taxonomías, categorías jerárquicas y navegación | High | 3 | En progreso |

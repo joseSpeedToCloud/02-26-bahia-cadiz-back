@@ -5,7 +5,7 @@
 **Prioridad:** Highest
 **Story Points:** 8 *(estimado)*
 **Labels:** backend, cms, drupal, content-types
-**Estado:** En progreso
+**Estado:** Hecho
 
 ## Descripción técnica
 
@@ -26,7 +26,9 @@ Tipos de contenido dados de alta + workflow editorial configurado (Content Moder
 - Patrones de alias Pathauto (`/eventos/...`, `/playas/...`, `/rutas/...`) para evitar el aviso de deprecacion de Pathauto y tener URLs limpias.
 - Config exportada a `config/sync/` (244 ficheros) e imagen Docker reconstruida con la config al dia.
 
-**Pendiente para cerrar la task:**
+**Cerrado (2026-08-03):**
 
-- Configurar Content Moderation (workflow borrador → revision → publicado) sobre los 3 tipos.
-- Probar vista previa en tiempo real y revertir a una revision anterior.
+- Content Moderation configurado (`scripts/provision-flujos-editoriales.php`, idempotente, integrado en `entrypoint.sh`): workflow "editorial" (Borrador → Publicado → Archivado) aplicado a los 7 tipos de contenido (no solo los 3 originales). Permisos de transición concedidos a `editor_municipio`/`content_editor` para que puedan seguir publicando su propio contenido sin regresión.
+- Probado end-to-end en local: nodo creado en Borrador (`isPublished() = false`) → transición a Publicado (`isPublished() = true`), verificado con `drush php:eval` contra la BD real.
+- Revertir a una revisión anterior: probado end-to-end sobre un nodo real (Playa de la Victoria) — título editado, guardado como nueva revisión, revertido a la revisión original, título recuperado correctamente.
+- **Vista previa en tiempo real**: hueco real, no resuelto. El módulo Quick Edit, que cubría esto en Drupal core, fue **eliminado del core a partir de Drupal 10.1** — ya no existe como opción "sin programación". Queda el botón de vista previa estándar (antes de guardar, no en tiempo real) y el módulo `contextual` (enlaces de edición en contexto). Resolver esto de verdad requeriría un módulo contrib de terceros, no incluido en este trabajo.
