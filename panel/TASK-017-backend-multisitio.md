@@ -5,7 +5,7 @@
 **Prioridad:** Medium *(estimado)*
 **Story Points:** 5 *(estimado)*
 **Labels:** backend, cms, drupal, multisitio
-**Estado:** En progreso (código escrito, pendiente de verificar contra Drupal real)
+**Estado:** Hecho
 
 ## Descripción técnica
 
@@ -21,4 +21,7 @@ Al menos 2 "sitios" de municipios distintos funcionando sobre la misma instancia
 - `scripts/provision-multisitio.php` — campo `field_user_municipio` en usuarios, rol `editor_municipio` con permisos de creación/edición/borrado sobre los 5 tipos de contenido, y 2 editores de ejemplo (`editor.cadiz`, `editor.sanfernando`) con permisos diferenciados sobre su propio municipio — evidencia literal del entregable.
 - `entrypoint.sh` y `config/sync/core.extension.yml` actualizados para aprovisionar y activar esto automáticamente en cada despliegue.
 
-**Pendiente**: verificar en real tras el despliegue que un editor de un municipio efectivamente no puede editar contenido de otro (no se ha podido probar contra una instancia Drupal viva desde esta sesión).
+**Verificado en real** (producción, tras corregir un bug de comparación de tipos en el hook — `term->id()` como string vs `int` en `in_array()` estricto):
+
+- Vía `drush php:script` directo contra la BD real: 6 combinaciones de nodo × editor probadas (municipio único y multi-municipio), todas con el resultado correcto.
+- Vía navegador: `editor.cadiz` logueado, menú de administración visible (permiso `access navigation` añadido), edición de contenido de su propio municipio permitida y de otro municipio denegada — confirmado por el usuario.

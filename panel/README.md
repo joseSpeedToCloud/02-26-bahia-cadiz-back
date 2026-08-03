@@ -29,7 +29,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 | [TASK-014](TASK-014-backend-admin-usuarios-permisos.md) | Administración simplificada + permisos por rol | High | 5 | Pendiente |
 | [TASK-015](TASK-015-backend-tipos-contenido-workflows.md) | Tipos de contenido + flujos editoriales + versionado | Highest | 8 | En progreso |
 | [TASK-016](TASK-016-backend-multiidioma.md) | Gestión multilingüe con traducción integrada | High | 5 | **Hecho** |
-| [TASK-017](TASK-017-backend-multisitio.md) | Soporte multisitio para los municipios | Medium | 5 | En progreso |
+| [TASK-017](TASK-017-backend-multisitio.md) | Soporte multisitio para los municipios | Medium | 5 | **Hecho** |
 | [TASK-018](TASK-018-backend-taxonomias-navegacion.md) | Taxonomías, categorías jerárquicas y navegación | High | 3 | En progreso |
 | [TASK-019](TASK-019-backend-gestion-archivos-integraciones.md) | Gestión de archivos e integraciones (SEO/agenda/redes/semántica) | Medium | 5 | Pendiente |
 
