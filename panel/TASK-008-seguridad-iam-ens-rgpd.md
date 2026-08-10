@@ -21,8 +21,12 @@ Definir roles IAM de mínimo privilegio, cifrado en reposo y en tránsito, y reg
 - Cifrado en tránsito de Cloud SQL: **confirmado en código**, no solo documentado — `ssl_mode = "ENCRYPTED_ONLY"` en `Fase2/3.CloudSQL/main.tf:63`.
 - **Cloud Audit Logs (Data Access)** aplicados en real sobre `cloudsql`/`storage`/`secretmanager` (`Fase0/iam.tf`, `terraform apply` confirmado).
 - **CORS restringido** al dominio real del front (`services.yml`, ya no `*`).
+- **Organization Policies de GCP** (`google_project_organization_policy`, `Fase0/org_policies.tf`, commit `eedf7ad`, 2026-07-29 — se añadió después de la última revisión de esta task, de ahí que siguiera constando como pendiente): las 3 propuestas ya están implementadas en código —
+  - `iam.disableServiceAccountKeyCreation` (impide crear nuevas claves de Service Account).
+  - `storage.uniformBucketLevelAccess` (fuerza IAM en vez de ACLs por objeto en buckets nuevos).
+  - `iam.allowedPolicyMemberDomains` (solo cuentas de `speedtocloud.com`, Customer ID `C01k16zbv`, pueden tener permisos IAM de tipo user/group).
+  - **Confirmado en código** (el fichero existe, comiteado). **No verificado en esta pasada** que las 3 políticas estén realmente aplicadas en el proyecto GCP real (`gcloud resource-manager org-policies describe`) — la sesión de `gcloud` disponible no pudo reautenticarse en modo no interactivo. Pendiente confirmar con un `terraform plan` limpio (sin diff) o `gcloud` con sesión interactiva.
 
 **Sigue pendiente:**
 
-- **Organization Policies de GCP**: no hay ningún recurso `google_organization_policy`/`google_org_policy_policy` en ningún fichero del repo — no configuradas en absoluto (más allá del IAM de mínimo privilegio, que sí está aplicado). Este es un hueco propio, distinto del IAM. Propuestas pendientes de confirmar: `iam.disableServiceAccountKeyCreation`, `storage.uniformBucketLevelAccess`, `iam.allowedPolicyMemberDomains`.
 - Informe formal de cumplimiento ENS básico: no existe como documento todavía.
