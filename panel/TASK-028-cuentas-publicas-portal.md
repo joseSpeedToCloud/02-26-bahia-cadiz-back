@@ -3,7 +3,7 @@
 **Categoría:** Gestión Usuarios
 **Requisito origen:** REQ-043 (Checklist_PlataformaDigitalBahiaCadiz.xlsx — PPT ap. 4.2)
 **Prioridad:** Media
-**Story Points:** 11 *(feature nueva de arquitectura, no un ajuste; incluye recuperación de contraseña + resultados de encuestas)*
+**Story Points:** 9 *(feature nueva de arquitectura, no un ajuste; incluye resultados agregados de encuestas)*
 **Labels:** backend, frontend, usuarios, rgpd
 **Estado:** Hecho
 
@@ -48,18 +48,9 @@ Contra el backend local (nunca contra producción, por tratarse de creación/bor
 - **Con navegador real (Playwright) contra la UI real**, no solo la API: flujo completo registro → `/mi-cuenta` (preferencias guardadas y visibles) → ficha de playa real (valoración con estrellas enviada, "Gracias por tu valoración." visible) → `/encuestas` (respuesta enviada, "Gracias por tu respuesta." visible) → eliminar cuenta desde la propia UI (confirmación + redirección a inicio). Sin errores de consola en ningún paso.
 - Entorno de prueba limpiado tras la verificación: nodo de playa devuelto a borrador, encuesta/valoraciones/respuestas y usuarios de prueba borrados, CORS temporal revertido en el contenedor (el fichero real nunca se tocó, confirmado con `git status`).
 
-## Ampliación (2026-08-12): recuperación de contraseña real + resultados de encuestas
+## Ampliación (2026-08-12): resultados agregados de encuestas
 
-A petición del usuario tras probar el login en producción, dos piezas más:
-
-### Recuperación de contraseña ("olvidaste tu contraseña")
-
-Bloqueo real encontrado antes de construir nada: **este proyecto nunca había enviado un correo real** — el contenedor no tiene ningún MTA (`sendmail`/`msmtp`), y `system.mail.yml` apuntaba a un `sendmail` inexistente. Se resolvió con:
-
-- SMTP real (contraseña de aplicación de Gmail de `notificaciones@srv.speedtocloud.com`), activado en `settings.php` solo si hay credenciales (`getenv('SMTP_USER')`), usando el plugin `symfony_mailer` que ya trae el core de Drupal 11 (`$config['system.mail']['interface']['default'] = 'symfony_mailer'` + `mailer_dsn`) — no ha hecho falta ningún módulo contrib de correo.
-- `POST /api/portal/olvide-contrasena` (`PortalUserController`): reutiliza el mecanismo real de Drupal core (`_user_mail_notify('password_reset', $user)`, el mismo enlace de un solo uso y caducidad que usa `/user/password`) — no se reinventa el token. El enlace del correo abre una página de Drupal (no del portal Angular) para poner la contraseña nueva; después hay que volver a iniciar sesión en el portal con ella — limitación de UX honesta, no oculta.
-- Responde siempre el mismo mensaje genérico, exista o no la cuenta (no revela qué correos están registrados).
-- Credenciales inyectadas por variable de entorno (`SMTP_USER`/`SMTP_PASS`), nunca en código: `.env` local (gitignored) para desarrollo, Secret Manager + Terraform para producción (ver más abajo).
+A petición del usuario tras probar el login en producción:
 
 ### Resultados agregados de encuestas
 
@@ -72,10 +63,6 @@ El pliego solo exige "registro para... encuestas" (ya cumplido) y expone "encues
 - **Gap de proceso más importante**: los tipos de contenido/campos/rol de REQ-043 se crearon vía script en tiempo de ejecución pero **nunca se exportaron a `config/sync`** (al contrario que el resto de scripts `provision-*.php` de este proyecto, que sí siguen la convención documentada en `CLAUDE.md` de exportar tras ejecutar). Consecuencia real: cada `drush config:import` (rama de actualización de `entrypoint.sh`) los borra, y el script los vuelve a crear justo después en el mismo arranque — funciona, pero es fragil y quedó demostrado por el bug de arriba. Corregido: `drush config:export` ejecutado y las ~28 YAML nuevas añadidas a `config/sync/` (incluye también los campos `field_*_valoracion` de REQ-042, que tenían el mismo gap sin que nadie lo hubiera notado).
 - Al exportar, `jsonapi.settings.yml` volvió a `read_only: true` (el valor activo de ese contenedor no coincidía con el fichero) — corregido de nuevo explícitamente.
 
-### Infraestructura (`02-26-infra-terraform`)
-
-Nuevo secreto en Secret Manager, siguiendo exactamente el mismo patrón ya usado para `google_oauth_client_secret` (credencial externa real, no autogenerada): `Fase2/secrets.tf` (`google_secret_manager_secret.smtp_pass`), `Fase2/variables.tf` (`smtp_user`, `smtp_pass`), `Fase2/main.tf` (inyectado en Cloud Run Back — `SMTP_USER` como env var normal, `SMTP_PASS` por `secret_key_ref`; el acceso IAM al secreto ya lo concede genéricamente el módulo `2.Cloud-Run-Back` a cualquier secreto pasado por `extra_secret_env_vars`, sin cambios adicionales). `terraform validate` y `terraform plan` reales ejecutados: 3 recursos a crear (secreto, versión, permiso IAM), 0 a destruir.
-
 ## Entregable / Evidencia
 
 **Backend** (`02-26-web-back`):
@@ -86,10 +73,8 @@ Nuevo secreto en Secret Manager, siguiendo exactamente el mismo patrón ya usado
 
 **Frontend** (`02-26-web-front`):
 - `src/app/services/auth.service.ts` (nuevo), `src/app/services/participacion.service.ts` (nuevo).
-- `src/app/pages/{login,registro,mi-cuenta,encuestas,olvide-contrasena}/` (nuevas).
+- `src/app/pages/{login,registro,mi-cuenta,encuestas}/` (nuevas).
 - `src/app/components/valoracion-usuario/valoracion-usuario.component.ts` (nuevo), integrado en las 5 fichas de detalle.
 - Accesos desde la portada (`home.page.html`): "Encuestas" y "Mi cuenta".
-
-**Infraestructura** (`02-26-infra-terraform`): `Fase2/secrets.tf`, `Fase2/variables.tf`, `Fase2/main.tf` — secreto SMTP, pendiente de `terraform apply` por el usuario.
 
 Pendiente exclusivamente de validación por el responsable del contrato.

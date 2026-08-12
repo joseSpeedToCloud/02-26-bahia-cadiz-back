@@ -1,6 +1,6 @@
 # Panel de Tasks — Backend (Plataforma Digital Bahía de Cádiz)
 
-Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificaciones/SPEC-001-plataforma-bahia-cadiz.md). Cubre solo la parte de **backend**: infraestructura cloud y núcleo del CMS. Total: 28 tasks, 102 story points.
+Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificaciones/SPEC-001-plataforma-bahia-cadiz.md). Cubre solo la parte de **backend**: infraestructura cloud y núcleo del CMS. Total: 28 tasks, 100 story points.
 
 ## Infraestructura / Cloud (GCP + Terraform + CI/CD) — 44 SP
 
@@ -18,7 +18,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 
 > Reconciliado el 2026-07-20 contra el Terraform real (`02-26-infra-terraform`), que no se conocía cuando se creó este panel — ver cada task para el detalle de la evidencia encontrada.
 
-## CMS (Drupal headless) — 86 SP *(story points estimados; el checklist original no detallaba esta categoría en esta sesión)*
+## CMS (Drupal headless) — 84 SP *(story points estimados; el checklist original no detallaba esta categoría en esta sesión)*
 
 | ID | Título | Prioridad | SP | Estado |
 |----|--------|-----------|----|--------|
@@ -40,7 +40,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 | [TASK-025](TASK-025-backend-geolocalizacion-eventos-mapa.md) | Acceso a los recursos correctamente geolocalizados en el mapa interactivo (eventos) | Medium | 2 | **Hecho** |
 | [TASK-026](TASK-026-solucion-llave-en-mano-produccion.md) | Solución llave en mano: portal + sistemas de operatividad + integración, verificado en producción | Highest | 3 | **Hecho** |
 | [TASK-027](TASK-027-navegacion-acceso-contenido-recursos.md) | Navegación y acceso claro/ordenado/geoposicionado al contenido (corrige hueco real de audio/vídeo/valoración) | Media | 3 | **Hecho** |
-| [TASK-028](TASK-028-cuentas-publicas-portal.md) | Cuentas públicas del portal: registro, preferencias, encuestas + resultados, valoraciones, borrado de cuenta (RGPD), recuperación de contraseña real (SMTP) | Media | 11 | **Hecho** |
+| [TASK-028](TASK-028-cuentas-publicas-portal.md) | Cuentas públicas del portal: registro, preferencias, encuestas + resultados, valoraciones, borrado de cuenta (RGPD) | Media | 9 | **Hecho** |
 
 ## Fuera de alcance de este panel (por ahora)
 
