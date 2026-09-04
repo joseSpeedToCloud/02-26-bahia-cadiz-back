@@ -5,7 +5,7 @@
 **Prioridad:** Media
 **Story Points:** 2
 **Labels:** frontend, ux, cuentas
-**Estado:** Hecho (con matiz — ver alcance no cubierto)
+**Estado:** Hecho
 
 ## Descripción técnica
 
