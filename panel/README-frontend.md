@@ -12,6 +12,7 @@ Hermano de [`panel/README.md`](README.md) (backend) — mismo SPEC, misma Mancom
 |----|--------|-----------|----|--------|
 | [TASK-F01](TASK-F01-portal-web-agenda-playas-movilidad.md) | Desarrollo y puesta en producción del portal (agenda cultural, playas, movilidad sostenible) | Alta | 8 *(estimado)* | **Hecho** |
 | [TASK-F02](TASK-F02-visualizacion-modulos-contenido.md) | Visualización real de los 4 módulos (gestor de contenidos, agenda, playas, movilidad), verificado en producción | Media | 2 *(estimado)* | **Hecho** |
+| [TASK-F03](TASK-F03-usabilidad-general-portal.md) | Usabilidad general (aprendizaje, velocidad, incidencias, frustración, satisfacción, universalidad) | Media | 3 | **Hecho (con matiz)** |
 
 ## Fuera de alcance de este panel (por ahora)
 
