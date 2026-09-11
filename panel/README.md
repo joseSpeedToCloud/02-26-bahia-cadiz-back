@@ -1,6 +1,6 @@
 # Panel de Tasks — Backend (Plataforma Digital Bahía de Cádiz)
 
-Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificaciones/SPEC-001-plataforma-bahia-cadiz.md). Cubre solo la parte de **backend**: infraestructura cloud y núcleo del CMS. Total: 28 tasks, 100 story points.
+Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificaciones/SPEC-001-plataforma-bahia-cadiz.md). Cubre solo la parte de **backend**: infraestructura cloud y núcleo del CMS. Total: 37 tasks, 120 story points.
 
 ## Infraestructura / Cloud (GCP + Terraform + CI/CD) — 44 SP
 
@@ -41,6 +41,15 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 | [TASK-026](TASK-026-solucion-llave-en-mano-produccion.md) | Solución llave en mano: portal + sistemas de operatividad + integración, verificado en producción | Highest | 3 | **Hecho** |
 | [TASK-027](TASK-027-navegacion-acceso-contenido-recursos.md) | Navegación y acceso claro/ordenado/geoposicionado al contenido (corrige hueco real de audio/vídeo/valoración) | Media | 3 | **Hecho** |
 | [TASK-028](TASK-028-cuentas-publicas-portal.md) | Cuentas públicas del portal: registro, preferencias, encuestas + resultados, valoraciones, borrado de cuenta (RGPD) | Media | 9 | **Hecho** |
+| [TASK-029](TASK-029-infra-dimensionamiento-escalabilidad.md) | Dimensionamiento de arquitectura para escalabilidad (REQ-058) | Media | 5 | En progreso |
+| [TASK-030](TASK-030-acceso-anonimo-registro-voluntario.md) | Acceso sin autenticación por defecto, registro voluntario (REQ-059) | Media | 1 | En progreso |
+| [TASK-031](TASK-031-compartir-redes-sociales.md) | Compartir en redes sociales (REQ-061) | Media | 1 | En progreso |
+| [TASK-032](TASK-032-seguridad-conexiones-permisos-minimos.md) | Seguridad: conexiones seguras y permisos mínimos (REQ-062) | Alta | 2 | En progreso |
+| [TASK-033](TASK-033-framework-moderno-pwa-capacitor.md) | Framework moderno, PWA offline y contenedores nativos (REQ-063) | Media | 1 | En progreso |
+| [TASK-034](TASK-034-empaquetado-hibrido-android-ios.md) | Empaquetado híbrido Android/iOS sin reescritura (REQ-064) | Media | 1 | En progreso |
+| [TASK-035](TASK-035-framework-typescript-spa-di.md) | TypeScript, SPA con lazy loading, change detection y DI (REQ-065) | Media | 1 | En progreso |
+| [TASK-036](TASK-036-pwa-offline-datos-push.md) | PWA: offline de datos y notificaciones push (REQ-066) | Media | 5 | En progreso |
+| [TASK-037](TASK-037-framework-ci-testing.md) | Framework recomendado, CI y pruebas automatizadas (REQ-067) | Media | 3 | En progreso |
 
 ## Fuera de alcance de este panel (por ahora)
 
