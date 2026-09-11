@@ -1,7 +1,7 @@
 # TASK-004 — Autoescalado y arquitectura API-first en Cloud Run/GKE
 
 **Categoría:** Infraestructura/Cloud
-**Requisito origen:** REQ-145 (SPEC-001), relacionado con REQ-011
+**Requisito origen:** REQ-145 (SPEC-001), relacionado con REQ-011 y REQ-058 (ver [`TASK-029`](TASK-029-infra-dimensionamiento-escalabilidad.md))
 **Prioridad:** High
 **Story Points:** 5
 **Labels:** infra, terraform, gcp, api
@@ -15,7 +15,8 @@ Configurar autoescalado horizontal (min/max instancias) del backend/API del CMS 
 
 **Implementado en `02-26-infra-terraform`**:
 
-- `Fase2/1.Cloud-Run-Front/main.tf` y `Fase2/2.Cloud-Run-Back/main.tf`: `min_instances = 0`, `max_instances = 10` (configurable por variable), aplicado como `scaling { min_instance_count / max_instance_count }`.
+- `Fase2/2.Cloud-Run-Back/main.tf`: `scaling { min_instance_count / max_instance_count }`, con los valores fijados en la llamada al módulo en `Fase2/main.tf:57-58` → **`min_instances = 1`, `max_instances = 3`** (corregido: antes este documento decía por error `min=0, max=10` también para el back).
+- `Fase2/1.Cloud-Run-Front/main.tf`: mismo mecanismo `scaling{}`, sin sobrescribir en `Fase2/main.tf` → se aplican los defaults del módulo, **`min_instances = 0`, `max_instances = 10`**.
 - Arquitectura API-first ya confirmada en la práctica: el CMS (Drupal) expone JSON:API y el portal (Angular/Ionic) consume esa API — sin acoplamiento de renderizado servidor a servidor.
 
 **Prueba de carga básica ejecutada** (REQ-145): 30 workers concurrentes (15 front + 15 back) durante 60s contra las URLs públicas reales.
