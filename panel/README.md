@@ -1,6 +1,6 @@
 # Panel de Tasks — Backend (Plataforma Digital Bahía de Cádiz)
 
-Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificaciones/SPEC-001-plataforma-bahia-cadiz.md). Cubre solo la parte de **backend**: infraestructura cloud y núcleo del CMS. Total: 37 tasks, 120 story points.
+Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificaciones/SPEC-001-plataforma-bahia-cadiz.md). Cubre solo la parte de **backend**: infraestructura cloud y núcleo del CMS. Total: 38 tasks, 123 story points.
 
 ## Infraestructura / Cloud (GCP + Terraform + CI/CD) — 44 SP
 
@@ -18,7 +18,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 
 > Reconciliado el 2026-07-20 contra el Terraform real (`02-26-infra-terraform`), que no se conocía cuando se creó este panel — ver cada task para el detalle de la evidencia encontrada.
 
-## CMS (Drupal headless) — 84 SP *(story points estimados; el checklist original no detallaba esta categoría en esta sesión)*
+## CMS (Drupal headless) — 87 SP *(story points estimados; el checklist original no detallaba esta categoría en esta sesión)*
 
 | ID | Título | Prioridad | SP | Estado |
 |----|--------|-----------|----|--------|
@@ -50,6 +50,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 | [TASK-035](TASK-035-framework-typescript-spa-di.md) | TypeScript, SPA con lazy loading, change detection y DI (REQ-065) | Media | 1 | En progreso |
 | [TASK-036](TASK-036-pwa-offline-datos-push.md) | PWA: offline de datos y notificaciones push (REQ-066) | Media | 5 | En progreso |
 | [TASK-037](TASK-037-framework-ci-testing.md) | Framework recomendado, CI y pruebas automatizadas (REQ-067) | Media | 3 | En progreso |
+| [TASK-038](TASK-038-agenda-eventos.md) | Módulo de Agenda de Eventos (REQ-069) | Alta | 3 | **Hecho** (con matiz — ver "Vista de agenda") |
 
 ## Fuera de alcance de este panel (por ahora)
 
