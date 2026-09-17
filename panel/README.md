@@ -1,6 +1,6 @@
 # Panel de Tasks — Backend (Plataforma Digital Bahía de Cádiz)
 
-Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificaciones/SPEC-001-plataforma-bahia-cadiz.md). Cubre solo la parte de **backend**: infraestructura cloud y núcleo del CMS. Total: 38 tasks, 123 story points.
+Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificaciones/SPEC-001-plataforma-bahia-cadiz.md). Cubre solo la parte de **backend**: infraestructura cloud y núcleo del CMS. Total: 39 tasks, 131 story points.
 
 ## Infraestructura / Cloud (GCP + Terraform + CI/CD) — 44 SP
 
@@ -51,6 +51,7 @@ Deriva de [`especificaciones/SPEC-001-plataforma-bahia-cadiz.md`](../especificac
 | [TASK-036](TASK-036-pwa-offline-datos-push.md) | PWA: offline de datos y notificaciones push (REQ-066) | Media | 5 | En progreso |
 | [TASK-037](TASK-037-framework-ci-testing.md) | Framework recomendado, CI y pruebas automatizadas (REQ-067) | Media | 3 | En progreso |
 | [TASK-038](TASK-038-agenda-eventos.md) | Módulo de Agenda de Eventos (REQ-069) | Alta | 3 | **Hecho** (con matiz — ver "Vista de agenda") |
+| [TASK-039](TASK-039-busqueda-filtrado-eventos.md) | Búsqueda y filtrado de eventos: fechas, categoría multiselección, municipio, geolocalización, orden, mapa (REQ-070) | Media | 8 | **Hecho** (con matiz — ver "Fuera de alcance") |
 
 ## Fuera de alcance de este panel (por ahora)
 
